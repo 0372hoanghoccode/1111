@@ -1,0 +1,86 @@
+package doan;
+import java.util.Scanner;
+
+abstract class Dienthoai {
+    private int maSanPham;
+    private int soLuong;
+    private float donGia;
+    private int maHang;
+    private String ten;
+    private String kichThuoc;
+
+    // Sử dụng Scanner làm biến static để tránh tạo nhiều đối tượng Scanner
+    protected static Scanner scanner = new Scanner(System.in);
+
+    public Dienthoai() {
+       
+    }
+    public int getMaSanPham() {
+        return maSanPham;
+    }
+
+    public int getSoLuong() {
+        return soLuong;
+    }
+
+    public float getDonGia() {
+        return donGia;
+    }
+
+    public int getMaHang() {
+        return maHang;
+    }
+
+    public String getTen() {
+        return ten;
+    }
+
+    public String getKichThuoc() {
+        return kichThuoc;
+    }
+
+    public void setMaSanPham(int maSanPham) {
+        this.maSanPham = maSanPham;
+    }
+
+    public void setSoLuong(int soLuong) {
+        this.soLuong = soLuong;
+    }
+
+    public void setDonGia(float donGia) {
+        this.donGia = donGia;
+    }
+
+    public void setMaHang(int maHang) {
+        this.maHang = maHang;
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public void setKichThuoc(String kichThuoc) {
+        this.kichThuoc = kichThuoc;
+    }
+
+    public void nhapThongTin() {
+        System.out.println("Nhap ma san pham: ");
+        maSanPham = scanner.nextInt();
+        System.out.println("Nhap so luong: ");
+        soLuong = scanner.nextInt();
+        System.out.println("Nhap don gia: ");
+        donGia = scanner.nextFloat();
+        System.out.println("Nhap ma hang: ");
+        maHang = scanner.nextInt();
+        scanner.nextLine(); 
+        System.out.println("Nhap ten: ");
+        ten = scanner.nextLine();
+        System.out.println("Nhap kich thuoc: ");
+        kichThuoc = scanner.nextLine();
+    }
+
+    public void xuatThongTin() {
+        System.out.printf("Ma san pham: %d\nSo luong: %d\nDon gia: %.2f\nMa hang: %d\nTen: %s\nKich thuoc: %s\n",
+            maSanPham, soLuong, donGia, maHang, ten, kichThuoc);
+    }
+}
