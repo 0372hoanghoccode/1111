@@ -156,7 +156,7 @@ public class Main {
     break;
 
 case 6:
-    System.out.println("Thoat.");
+    System.out.println(".");
     break;
 default:
     System.out.println("Lua chon khon hơp le.");
