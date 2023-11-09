@@ -1,6 +1,6 @@
 package doan;
 import java.util.Scanner;
-public class Smartphone extends Dienthoai {
+public class Smartphone extends Dienthoai implements doituong {
     private String heDieuHanh;
     private int ram;
     private String chip;
@@ -10,8 +10,8 @@ public class Smartphone extends Dienthoai {
     }
 
     @Override
-    public void nhapThongTin() {
-        super.nhapThongTin();
+    public void Nhap() {
+        super.Nhap();
         System.out.println("Nhap he dieu hanh: ");
         heDieuHanh = scanner.nextLine();
         System.out.println("Nhap RAM: ");
@@ -22,8 +22,11 @@ public class Smartphone extends Dienthoai {
     }
 
     @Override
-    public void xuatThongTin() {
-        super.xuatThongTin();
+    public void Xuat() {
+        super.Xuat();
         System.out.printf("He dieu hanh: %s\nRAM: %d\nChip: %s\n", heDieuHanh, ram, chip);
+    }
+    public void Goi(){
+        System.out.println("video call ");
     }
 }

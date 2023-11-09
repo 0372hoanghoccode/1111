@@ -3,10 +3,12 @@ package doan;
 public class ListDT {
     private Dienthoai[] listdt;
     private int size;
-
-    public ListDT(int n) {
-        listdt = new Dienthoai[n];
-        size = 0;
+public ListDT(){
+listdt= new Dienthoai[0];
+}
+    public ListDT(Dienthoai[] dienthoai) {
+        listdt = new Dienthoai[dienthoai.length];
+        listdt = dienthoai;
     }
 
     public void addDienthoai(Dienthoai dt) {

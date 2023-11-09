@@ -63,7 +63,7 @@ abstract class Dienthoai {
         this.kichThuoc = kichThuoc;
     }
 
-    public void nhapThongTin() {
+    public void Nhap() {
         System.out.println("Nhap ma san pham: ");
         maSanPham = scanner.nextInt();
         System.out.println("Nhap so luong: ");
@@ -79,8 +79,15 @@ abstract class Dienthoai {
         kichThuoc = scanner.nextLine();
     }
 
-    public void xuatThongTin() {
+    public void Xuat() {
         System.out.printf("Ma san pham: %d\nSo luong: %d\nDon gia: %.2f\nMa hang: %d\nTen: %s\nKich thuoc: %s\n",
             maSanPham, soLuong, donGia, maHang, ten, kichThuoc);
+
+
     }
+    public void Sua(){
+
+    }
+  abstract void Goi();
 }
+    

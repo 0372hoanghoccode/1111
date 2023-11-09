@@ -1,7 +1,7 @@
 package doan;
 import java.util.Scanner;
 
-public class DTPT extends Dienthoai {
+public class DTPT extends Dienthoai implements doituong{
     private String banPhim;
 
     public DTPT() {
@@ -17,15 +17,18 @@ public class DTPT extends Dienthoai {
     }
 
     @Override
-    public void nhapThongTin() {
-        super.nhapThongTin();
+    public void Nhap() {
+        super.Nhap();
         System.out.println("Nhap loai ban phim: ");
         banPhim = scanner.nextLine();
     }
 
     @Override
-    public void xuatThongTin() {
-        super.xuatThongTin();
+    public void Xuat() {
+        super.Xuat();
         System.out.println("Loai ban phim: " + banPhim);
+    }
+    public void Goi(){
+        System.out.println( "  goi thuong " );
     }
 }
