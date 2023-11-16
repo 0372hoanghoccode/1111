@@ -4,7 +4,7 @@ public class ListDT {
     private Dienthoai[] listdt;
     private int size;
 public ListDT(){
-listdt= new Dienthoai[0];
+listdt= new Dienthoai[100];
 }
     public ListDT(Dienthoai[] dienthoai) {
         listdt = new Dienthoai[dienthoai.length];
@@ -19,6 +19,7 @@ listdt= new Dienthoai[0];
             System.out.println("Danh sach day ko them duoc.");
         }
     }
+    
 
     public void removeDienthoai(int index) {
         if (index >= 0 && index < size) {
@@ -56,9 +57,9 @@ listdt= new Dienthoai[0];
         for (int i = 0; i < size; i++) {
             if (listdt[i] != null) {
                 if (listdt[i] instanceof Smartphone && "Smartphone".equals(loai)) {
-                    listdt[i].xuatThongTin();
+                    listdt[i].Xuat();
                 } else if (listdt[i] instanceof DTPT && "Dien thoai pho thong".equals(loai)) {
-                    listdt[i].xuatThongTin();
+                    listdt[i].Xuat();
                 }
             }
         }
@@ -85,7 +86,7 @@ listdt= new Dienthoai[0];
     public void timVaInSanPham(int maSanPham) {
         Dienthoai dt = timKiemSanPham(maSanPham);
         if (dt != null) {
-            dt.xuatThongTin();
+            dt.Xuat();
         } else {
             System.out.println("Khong tim thay san pham voi ma: " + maSanPham);
         }
